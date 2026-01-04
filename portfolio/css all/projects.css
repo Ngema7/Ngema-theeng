@@ -1,0 +1,118 @@
+/* ================= ROOT COLORS ================= */
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1e40af;
+
+  --bg-main: #f8fafc;
+  --bg-gradient-start: #e0e7ff;
+  --bg-gradient-end: #f8fafc;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e5e7eb;
+}
+
+/* ================= SERVICES SECTION ================= */
+.services {
+  padding: 60px 5%;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 35px;
+}
+
+
+.services-container {
+  max-width: 70%;                 
+  margin: 0 auto 30px;           
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+/* ======= SERVICE CARD==== */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18);
+}
+
+/* ====== CARD IMAGE ====== */
+.service-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+
+.service-card h3 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.service-card span {
+  color: var(--primary-color);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* ====== BUTTON ======== */
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+/* ====== RESPONSIVE ========= */
+@media (max-width: 992px) {
+  .services-container {
+    max-width: 90%;   
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 6%;
+  }
+
+  .services-container {
+    max-width: 100%;  
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1e40af;
+
+  --bg-main: #f8fafc;
+  --bg-gradient-start: #e0e7ff;
+  --bg-gradient-end: #f8fafc;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e5e7eb;
+}
+
+/* ===== ABOUT ME ===== */
+.about {
+  padding: 100px 20px;
+   background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+}
+.about h2 {
+  font-size: 34px;
+  color: var(--text-primary);
+  margin-bottom: 50px;
+  text-align: center; 
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Image Card */
+.about-image {
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.about-image img {
+  width: 320px;
+  border-radius: 20px;
+}
+
+/* Content */
+.about-content {
+  max-width: 600px;
+  background: var(--bg-main);
+  padding: 30px; 
+  border-radius: 20px;   
+}
+
+
+
+.about-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* List */
+.about-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.about-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about-list li {
+    text-align: left;
+  }
+}
